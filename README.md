@@ -38,9 +38,10 @@ You are working as a data scientist for a healthcare analytics company. You have
 ### 🔹 Q4: ODE Simulation of Drug Concentration (3 Marks)
 
 - Modeled the equation:  
-  \[
-  \frac{dC}{dt} = k(D - C) \quad \text{where } k = 0.1, D = 100, C(0) = 0
-  \]
+ 
+Model the progression of a patient's medication in the bloodstream. 
+Equation: 
+  dC/dt = k(D - C) 
 - Simulated over \( t = 0 \) to \( t = 50 \)
 - Used both `odeint` and `solve_ivp` from `scipy.integrate`
 - Plotted both solutions and compared their outputs
