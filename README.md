@@ -1,49 +1,37 @@
-## 📘 Project Scenario
+## Scenario: 
 
-You are working as a data scientist for a healthcare analytics company. You have been provided with a dataset containing anonymized patient data. Your task is to clean the data, visualize trends, analyze statistical relationships, and simulate a basic health-related system using First Order ODEs.
+You are working as a data scientist for a healthcare analytics company. You have been 
+provided with a dataset containing anonymized patient data. Your task is to clean the data, 
+visualize it, analyze statistical relationships, and simulate a basic health-related system 
+using First Order ODEs. 
 
----
+Q1: Outlier Detection and Feature Reduction (2 Marks) 
+- Use VarianceThreshold to remove constant features (if any).
+- Detect and remove outliers from CholesterolLevel using any method of choice.
+- Replace any missing values. 
 
-## ✅ Tasks Overview
+Q2: Data Visualization (2 Marks) 
+- Generate a box plot comparing BloodPressure between different RiskCategory levels. 
+- Create a count plot showing the number of patients in each RiskCategory per Region. 
 
-### 🔹 Q1: Outlier Detection and Feature Reduction (2 Marks)
+Q3: Statistical Hypothesis Testing (3 Marks) 
 
-- Applied `VarianceThreshold` to remove constant features.
-- Detected and removed outliers from `CholesterolLevel` using the IQR method.
-- Replaced any missing values using appropriate techniques.
+Perform the following: 
+- Is the average CholesterolLevel significantly different from 200 mg/dL having a sample 
+size of 20? 
+- Is there a significant relationship between Region and RiskCategory? 
+Include:
+- Null and alternative hypotheses
+- Test statistic, p-value
+- Your interpretation (reject/fail to reject H₀) 
 
-### 🔹 Q2: Data Visualization (2 Marks)
+Q4: Modeling a Health System with ODE (3 Marks) 
 
-- Created a **box plot** comparing `BloodPressure` across different `RiskCategory` levels.
-- Generated a **count plot** showing the number of patients in each `RiskCategory` per `Region`.
-
-### 🔹 Q3: Statistical Hypothesis Testing (3 Marks)
-
-#### 📌 Test 1: One-Sample T-Test
-- **Hypothesis:**  
-  - H₀: Mean CholesterolLevel = 200  
-  - H₁: Mean CholesterolLevel ≠ 200  
-- Sample size: 20  
-- Test statistic and p-value calculated  
-- Conclusion based on p-value
-
-#### 📌 Test 2: Chi-Square Test of Independence
-- **Hypothesis:**  
-  - H₀: Region and RiskCategory are independent  
-  - H₁: Region and RiskCategory are associated  
-- Performed using a contingency table  
-- Test statistic and p-value provided  
-- Interpretation based on the result
-
-### 🔹 Q4: ODE Simulation of Drug Concentration (3 Marks)
-
-- Modeled the equation:  
- 
 Model the progression of a patient's medication in the bloodstream. 
 Equation: 
-  dC/dt = k(D - C) 
-- Simulated over \( t = 0 \) to \( t = 50 \)
-- Used both `odeint` and `solve_ivp` from `scipy.integrate`
-- Plotted both solutions and compared their outputs
+dC/dt = k(D - C) 
 
-
+Where: 
+- k = 0.1, D = 100, C(0) = 0 
+- Solve this ODE for t = 0 to 50 using both odeint and solve_ivp 
+- Plot the result and explain the difference in output between the two solvers, if any.
